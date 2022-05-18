@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol AddViewControllerDelegate {
+protocol AddViewControllerDelegate: AnyObject {
     func reloadTableView()
 }
 
@@ -16,7 +16,7 @@ class AddViewController: UIViewController {
     @IBOutlet weak var titletf: UITextField!
     @IBOutlet weak var contenttf: UITextField!
 
-    var delegate: AddViewControllerDelegate?
+    weak var delegate: AddViewControllerDelegate?
     var modelManager: ModelManager? = nil
 
     override func viewDidLoad() {

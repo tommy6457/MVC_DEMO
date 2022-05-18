@@ -22,4 +22,7 @@ class TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func updateCell(model: Model){
+        titlelb.text = model.title
+    }
 }

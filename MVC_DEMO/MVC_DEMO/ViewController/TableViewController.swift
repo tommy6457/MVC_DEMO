@@ -43,9 +43,9 @@ class TableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let data = modelManager.model[indexPath.row]
+        let model = modelManager.model[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(TableViewCell.self)", for: indexPath) as! TableViewCell
-        cell.titlelb.text = data.title
+        cell.updateCell(model: model)
 
         return cell
     }
